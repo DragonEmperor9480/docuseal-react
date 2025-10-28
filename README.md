@@ -126,3 +126,50 @@ Find Next.js example project [here](https://github.com/docusealco/docuseal-react
 # License
 
 MIT
+
+## Usage Without JWT Authentication( my custom changes)
+
+If your users are already authenticated in your application, you can use the DocuSeal components without requiring a JWT token.
+
+### Form Builder (Without Token)
+
+```jsx
+import React from 'react'
+import { DocusealBuilder } from '@docuseal/react'
+
+export function App() {
+  return (
+    <div className="app">
+      <DocusealBuilder 
+        name="My Document Form"
+        roles={['Signer', 'Approver']}
+        // No token required!
+      />
+    </div>
+  );
+}
+```
+
+### Form Builder (With Optional Token)
+
+The `token` prop is now optional. You can still use it when needed:
+
+```jsx
+import React from 'react'
+import { DocusealBuilder } from '@docuseal/react'
+
+export function App() {
+  const token = getTokenIfNeeded(); // Optional
+
+  return (
+    <div className="app">
+      <DocusealBuilder 
+        token={token}  // Optional prop
+        name="My Document Form"
+      />
+    </div>
+  );
+}
+```
+
+**Note:** When using without authentication, ensure your DocuSeal instance is configured appropriately for your security requirements.

@@ -42,7 +42,7 @@ export type DocusealBuilderSubmitter = {
 }
 
 export type DocusealBuilderProps = {
-  token: string,
+  token?: string,
   host?: string,
   withRecipientsButton?: boolean,
   withSendButton?: boolean,
@@ -89,7 +89,7 @@ export type DocusealBuilderProps = {
 }
 
 const DocusealBuilder = ({
-  token,
+  token = '',
   host = 'cdn.docuseal.com',
   language = 'en',
   preview = false,
@@ -117,11 +117,11 @@ const DocusealBuilder = ({
   customButton = { title: '', url: '' },
   emailMessage = { subject: '', body: '' },
   backgroundColor = '',
-  onLoad = () => {},
-  onUpload = () => {},
-  onSend = () => {},
-  onSave = () => {},
-  onChange = () => {},
+  onLoad = () => { },
+  onUpload = () => { },
+  onSend = () => { },
+  onSave = () => { },
+  onChange = () => { },
   className = '',
   sendButtonText = '',
   saveButtonText = '',
