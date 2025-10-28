@@ -15,8 +15,26 @@ This package provides a convenient way to embed [DocuSeal](https://www.docuseal.
 
 ## Installation
 
+### Install from npm (Original Package)
+
 ```bash
 npm install @docuseal/react
+```
+
+### Install from GitHub (This Forked Version - No JWT Required)
+
+```bash
+npm install github:DragonEmperor9480/docuseal-react
+```
+
+Or add to your `package.json`:
+
+```json
+{
+  "dependencies": {
+    "@docuseal/react": "github:DragonEmperor9480/docuseal-react"
+  }
+}
 ```
 
 ## Documentation
